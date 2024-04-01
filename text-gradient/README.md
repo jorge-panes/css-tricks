@@ -4,7 +4,7 @@ This project demonstrates a simple but visually striking text gradient effect us
 
 ## Live Version
 
-You can view a live version of this project at the following URL: [https://jorge-panes.github.io/css-tricks/gradient-text/](https://jorge-panes.github.io/css-tricks/gradient-text/). This live version is hosted on GitHub Pages, providing an easy way to see the text gradient effect in action.
+You can view a live version of this project at the following URL: [https://jorge-panes.github.io/css-tricks/text-gradient/](https://jorge-panes.github.io/css-tricks/text-gradient/). This live version is hosted on GitHub Pages, providing an easy way to see the text gradient effect in action.
 
 ## Project Structure
 
