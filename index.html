@@ -16,6 +16,8 @@
         const username = 'jorge-panes';
         const repository = 'css-tricks';
         const branch = 'main';
+        // Define an array of filenames to exclude
+        const excludedNames = ['README.md', 'LICENSE', 'CONTRIBUTING.md','index.html','style.css'];
 
         async function fetchFiles() {
             // Adjusted API URL to fetch content from the root or a specific path within your repository
@@ -28,9 +30,9 @@
             const pagesBaseURL = `https://${username}.github.io/${repository}/`;
 
             data.forEach(file => {
-                // Skipping LICENSE and README.md files
-                if (file.name.toUpperCase() === 'LICENSE' || file.name.toUpperCase() === 'README.MD') {
-                    return; // Skip this iteration, don't add these files to the list
+                // Check if the current file's name is in the excludedNames array
+                if (excludedNames.includes(file.name)) {
+                    return; // Skip this file
                 }
 
                 // Constructing the direct URL to the file or directory on GitHub Pages
