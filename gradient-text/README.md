@@ -1,6 +1,10 @@
-# Text Gradient Example
+# Text Gradient Trick
 
 This project demonstrates a simple but visually striking text gradient effect using HTML and CSS. It showcases how to apply a linear gradient to text for a colorful and dynamic appearance.
+
+## Live Version
+
+You can view a live version of this project at the following URL: [https://jorge-panes.github.io/css-tricks/gradient-text/](https://jorge-panes.github.io/css-tricks/gradient-text/). This live version is hosted on GitHub Pages, providing an easy way to see the text gradient effect in action.
 
 ## Project Structure
 
@@ -9,7 +13,7 @@ This project demonstrates a simple but visually striking text gradient effect us
 
 ## Viewing the Project
 
-To view this project, simply clone this repository to your local machine and open the `index.html` file in your preferred web browser. The text gradient effect will be visible on the header text.
+To view this project, simply clone this repository to your local machine and open the `index.html` file in your preferred web browser. The text gradient effect will be visible on the header text. Alternatively, you can visit the live version linked above.
 
 ## CSS for Text Gradient
 
