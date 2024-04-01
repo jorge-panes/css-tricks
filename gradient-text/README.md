@@ -18,3 +18,11 @@ To view this project, simply clone this repository to your local machine and ope
 ## CSS for Text Gradient
 
 The key to this effect is the CSS styling applied to the `<h1>` element. Here's a quick look at the CSS used:
+
+```css
+h1 {
+    background: linear-gradient(90deg, blue, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
