@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tricks Listing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Tricks Listing</h1>
+            <div id="file-list" class="link-list"></div>
+        </div>
+    </div>
+    
+    <script>
+        const username = 'jorge-panes';
+        const repository = 'css-tricks';
+        const branch = 'main';
+
+        async function fetchFiles() {
+            // Adjusted API URL to fetch content from the root or a specific path within your repository
+            const apiURL = `https://api.github.com/repos/${username}/${repository}/contents/?ref=${branch}`;
+            const response = await fetch(apiURL);
+            const data = await response.json();
+            const fileList = document.getElementById('file-list');
+
+            // GitHub Pages base URL for your project
+            const pagesBaseURL = `https://${username}.github.io/${repository}/`;
+
+            data.forEach(file => {
+                // Skipping LICENSE and README.md files
+                if (file.name.toUpperCase() === 'LICENSE' || file.name.toUpperCase() === 'README.MD') {
+                    return; // Skip this iteration, don't add these files to the list
+                }
+
+                // Constructing the direct URL to the file or directory on GitHub Pages
+                const directURL = pagesBaseURL + file.path;
+
+                const link = document.createElement('a');
+                link.href = directURL;
+                link.textContent = file.name;
+                link.target = '_blank'; // Optional: Opens link in a new tab
+
+                const listItem = document.createElement('li');
+                listItem.appendChild(link);
+                fileList.appendChild(listItem);
+            });
+        }
+
+        fetchFiles();
+    </script>
+</body>
+</html>

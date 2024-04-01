@@ -1,0 +1,45 @@
+/* This will center the `.container` div and does not directly affect the width */
+.container {
+    display: flex;
+    justify-content: center; /* This centers the `.content` div horizontally */
+    align-items: center; /* This centers the `.content` div vertically */
+    height: 100vh; /* This makes the `.container` div take up the full viewport height */
+}
+
+/* This will make the `.content` div width adjust to its content */
+.content {
+    display: inline-block; /* This makes the div's width be as wide as its content */
+    /* Additional styling for clarity */
+    padding: 20px;
+}
+
+.link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the space between items */
+}
+
+.link-list li {
+    background: #f0f0f0;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust based on content */
+}
+
+.link-list li:hover {
+    background: #e0e0e0;
+    transform: translateX(10px); /* A simple interaction on hover */
+}
+
+.link-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
