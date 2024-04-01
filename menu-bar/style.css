@@ -1,9 +1,5 @@
 @import url("../assets/style.css");
 
-body {
-  background-color: #b7b7b7;
-}
-
 ul {
   display: flex;
   justify-content: center;
