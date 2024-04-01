@@ -1,0 +1,30 @@
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: rgb(115, 110, 110);
+    display: flex;
+    justify-content: center; /* This centers the `.content` div horizontally */
+    align-items: center; /* This centers the `.content` div vertically */
+    border-radius: 8px;
+    height: 100px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards .card:hover{
+    transform: scale(1.2, 1.2);
+}
+
+.cards:hover > .card:not(:hover){
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+}

@@ -1,21 +1,8 @@
+@import url('../assets/style.css');
+
 /* This sets the webpage's cursor to a custom image */
 body{
     cursor: url('../assets/cursor.cur'), auto;
-}
-
-/* This will center the `.container` div and does not directly affect the width */
-.container {
-    display: flex;
-    justify-content: center; /* This centers the `.content` div horizontally */
-    align-items: center; /* This centers the `.content` div vertically */
-    height: 100vh; /* This makes the `.container` div take up the full viewport height */
-}
-
-/* This will make the `.content` div width adjust to its content */
-.content {
-    display: inline-block; /* This makes the div's width be as wide as its content */
-    /* Additional styling for clarity */
-    padding: 20px;
 }
 
 
